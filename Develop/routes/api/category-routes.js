@@ -10,6 +10,8 @@ router.get('/', async (req, res) => {
     const categoryData = await Category.findAll({
     });
 
+
+    
     if(!categoryData){
       res.status(404).json({message:'Category not in database'});
       return;
